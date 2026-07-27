@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 style="text-align: center;">Patron</h1>
+    <div id="toolbar">
+        <button class="color" data-color="black">Black</button>
+        <button class="color" data-color="red">Red</button>
+        <button class="color" data-color="blue">Blue</button>
+        <button class="color" data-color="green">Green</button>
+        <button class="color" data-color="orange">Orange</button>
+        <button id="clear">Clear</button>
+    </div>
+
+    <div id="drawing-area">
+        <img id="background" src="Hereford_Mappa_Mundi_1300.jpg" alt="Map of the World">
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <div id = "myPopup" class="popup">
+        <div class="popuptext">
+            <h2>Congratulations!</h2>
+            <p><i>Be who God meant you to be, and you will set the world on fire. - St. Catherine of Siena </i></p>
+            <p>The next clue: </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

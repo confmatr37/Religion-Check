@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #ddd;
+}
+
+#toolbar {
+    display: flex;
+    gap: 10px;
+    padding: 12px;
+    background: #444;
+}
+
+button {
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+#drawing-area {
+    position: relative;
+    width: 800px;
+    height: 600px;
+}
+
+#background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+#canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Popup container */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    width: 75%;
+    height: 75%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* The actual popup (appears on top) */
+.popuptext {
+    background: white;
+    color: black;
+    width: 70%;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup.show {
+    display: flex;
+    animation: fadeIn 1s;
+}
+
+.popupcontent {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
