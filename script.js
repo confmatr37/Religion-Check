@@ -3,7 +3,7 @@ const ctx = canvas.getContext("2d");
 const clearButton = document.getElementById("clear");
 
 // Fill most of the page
-canvas.width = 800;
+canvas.width = 600;
 canvas.height = 700;
 
 let drawing = false;
