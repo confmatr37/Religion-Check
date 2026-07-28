@@ -22,6 +22,18 @@ button {
     height: 600px;
 }
 
+.container { 
+            width: auto; 
+            height: 100%; 
+            overflow: hidden; 
+        } 
+
+ .container img { 
+            width: auto; 
+            height: 100%; 
+            object-fit: contain; 
+} 
+
 #background {
     position: absolute;
     width: 100%;
