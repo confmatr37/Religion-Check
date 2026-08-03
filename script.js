@@ -24,7 +24,7 @@ canvas.addEventListener("mousedown", () => {
 canvas.addEventListener("mouseup", () => {
     drawing = false;
     ctx.beginPath(); // stops lines connecting separate strokes
-    checkForFire();
+    check();
 });
 
 canvas.addEventListener("mouseleave", () => {
@@ -69,24 +69,24 @@ const region = {
     width : 550,
     height : 550
 }
-function checkForFire() {
+function check() {
     const imageData = ctx.getImageData(
         region.x,
         region.y,
         region.width,
         region.height
     );
-    let firePixels = 0;
+    let correct = 0;
     const pixels = imageData.data;
     for(let i = 0; i < pixels.length; i += 4) {
-        const red = pixels[i];
-        const green = pixels[i + 1];
-        const blue = pixels[i + 2];
-        if(red > 200 && blue < 50) {
-            firePixels++;
+        const a = pixels[i];
+        const b = pixels[i + 1];
+        const c = pixels[i + 2];
+        if(a > 200 && b < 50) {
+            correct++;
         }
     }
-    if(firePixels/(pixels.length / 4) > 0.3) {
+    if(correct/(pixels.length / 4) > 0.5) {
         myFunction();
     }
 }
