@@ -1,6 +1,7 @@
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 const clearButton = document.getElementById("clear");
+const encodedClue = "VGhlIGxldHRlciBpcyBiZWhpbmQgdGhlIE5DTSBmbGFnLg==";
 
 // Fill most of the page
 canvas.width = 600;
@@ -93,4 +94,6 @@ function checkForFire() {
 function myFunction() {
         var popup = document.getElementById("myPopup");
         popup.classList.toggle("show");
+        const clue = atob(encodedClue);
+        document.getElementById("clue").textContent = clue;
 }
