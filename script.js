@@ -86,7 +86,7 @@ function check() {
             correct++;
         }
     }
-    if(correct/(pixels.length / 4) > 0.5) {
+    if(correct/(pixels.length / 4) > 0.6) {
         myFunction();
     }
 }
