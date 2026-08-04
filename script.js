@@ -95,5 +95,5 @@ function myFunction() {
         var popup = document.getElementById("myPopup");
         popup.classList.toggle("show");
         const clue = atob(encodedClue);
-        document.getElementById("answer").textContent = clue;
+        //document.getElementById("answer").textContent = clue;
 }
