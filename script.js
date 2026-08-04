@@ -86,7 +86,7 @@ function check() {
             correct++;
         }
     }
-    if(correct/(pixels.length / 4) > 0.75) {
+    if(correct/(pixels.length / 4) > 0.5) {
         myFunction();
     }
 }
@@ -95,5 +95,5 @@ function myFunction() {
         var popup = document.getElementById("myPopup");
         popup.classList.toggle("show");
         const clue = atob(encodedClue);
-        document.getElementById("answer").textContent = "Test";
+        document.getElementById("answer").textContent = clue;
 }
